@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "recipe-rating-telegram-bot"
+version = "2.0.0"
+description = "Учебный Telegram-бот: рецепты, личное избранное и рейтинг"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{name = "Georgiy Belyanin"}]
+dependencies = [
+  "python-telegram-bot==22.8",
+  "httpx==0.28.1",
+  "python-dotenv==1.2.2",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "pytest-asyncio>=1,<2", "pytest-cov>=6,<8", "ruff>=0.12,<1", "pip-audit>=2.9,<3", "setuptools==84.0.0", "wheel==0.48.0"]
+
+[project.scripts]
+recipe-bot = "recipe_bot.app:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+addopts = "-ra"
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "S"]
+ignore = ["S101"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S105", "S106"]
