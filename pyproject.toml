@@ -13,7 +13,7 @@ authors = [{name = "Georgiy Belyanin"}]
 dependencies = [
   "python-telegram-bot==22.8",
   "httpx==0.28.1",
-  "python-dotenv==1.2.2",
+  "python-dotenv==1.2.4",
 ]
 
 [project.optional-dependencies]
