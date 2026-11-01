@@ -17,7 +17,7 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-dev = ["pytest>=8,<10", "pytest-asyncio>=1,<2", "pytest-cov>=6,<8", "ruff>=0.12,<1", "pip-audit>=2.9,<3", "setuptools==84.0.0", "wheel==0.48.0"]
+dev = ["pytest>=8,<10", "pytest-asyncio>=1,<2", "pytest-cov>=6,<8", "ruff>=0.12,<1", "pip-audit>=2.9,<3", "setuptools==84.2.1", "wheel==0.48.0"]
 
 [project.scripts]
 recipe-bot = "recipe_bot.app:main"
